@@ -4,6 +4,7 @@
 //! Provides 2D sprite rendering functionality.
 mod bundle;
 mod dynamic_texture_atlas_builder;
+mod lighting;
 mod mesh2d;
 mod render;
 mod sprite;
@@ -24,6 +25,7 @@ pub mod prelude {
 
 pub use bundle::*;
 pub use dynamic_texture_atlas_builder::*;
+pub use lighting::*;
 pub use mesh2d::*;
 pub use render::*;
 pub use sprite::*;
@@ -74,7 +76,7 @@ impl Plugin for SpritePlugin {
             .register_type::<Anchor>()
             .register_type::<TextureAtlas>()
             .register_type::<Mesh2dHandle>()
-            .add_plugins((Mesh2dRenderPlugin, ColorMaterialPlugin))
+            .add_plugins((Mesh2dRenderPlugin, ColorMaterialPlugin, LightingPlugin))
             .add_systems(
                 PostUpdate,
                 (

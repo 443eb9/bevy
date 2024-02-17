@@ -2655,6 +2655,10 @@ description = "Shows off rendering for all math primitives as both Meshes and Gi
 category = "Math"
 wasm = true
 
+[[example]]
+name = "2d_lighting"
+path = "examples/2d/2d_lighting.rs"
+
 [profile.wasm-release]
 inherits = "release"
 opt-level = "z"
