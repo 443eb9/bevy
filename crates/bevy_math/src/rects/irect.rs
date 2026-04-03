@@ -25,6 +25,7 @@ use bevy_reflect::{ReflectDeserialize, ReflectSerialize};
     all(feature = "serialize", feature = "bevy_reflect"),
     reflect(Serialize, Deserialize)
 )]
+#[cfg_attr(feature = "encase", derive(encase::ShaderType))]
 pub struct IRect {
     /// The minimum corner point of the rect.
     pub min: IVec2,

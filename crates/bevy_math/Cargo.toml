@@ -29,6 +29,7 @@ bevy_reflect = { path = "../bevy_reflect", version = "0.18.0", default-features 
   "glam",
 ], optional = true }
 variadics_please = "1.1"
+encase = { version = "0.12", optional = true }
 
 [dev-dependencies]
 approx = "0.5"
@@ -85,6 +86,7 @@ bevy_reflect = ["dep:bevy_reflect", "alloc"]
 # Enable libm mathematical functions as a fallback for no_std environments.
 # Can be overridden with std feature.
 nostd-libm = ["dep:libm", "glam/nostd-libm"]
+encase = ["dep:encase", "glam/encase"]
 
 [lints]
 workspace = true
